@@ -10,7 +10,7 @@ handle.readline()   #
 
 counts = dict()
 for line in handle:
-    if line.startswith('-'):    # --- xxxx년 xx월 xx일 x요일 ---
+    if line.startswith('--------------- '):    # --- xxxx년 xx월 xx일 x요일 ---
         continue
     words = line.split()    # ['[xxx]', '[오전/오후', 'hh:mm]', ...]
     for word in words[3:]:
