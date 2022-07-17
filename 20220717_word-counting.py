@@ -22,4 +22,4 @@ for line in handle:
 result = sorted(counts.items(), key = lambda item: item[1], reverse = True)
 #print(result[:30])
 for i in range(30):
-    print(f'# {i}: {result[i][0]} ({result[i][1]})')
+    print(f'# {i+1}: {result[i][0]} ({result[i][1]})')
