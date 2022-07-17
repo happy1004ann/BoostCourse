@@ -12,6 +12,12 @@ counts = dict()
 for line in handle:
     if line.startswith('--------------- '):    # --- xxxx년 xx월 xx일 x요일 ---
         continue
+    if '선물을 보냈습니다. 지금 확인해 보세요!' in line:
+        continue
+    if '선물과 메시지를 보냈습니다.' in line:
+        continue
+    if line == '지금 확인해 보세요!':
+        continue
     
     words = line.split()
     
