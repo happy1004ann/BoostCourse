@@ -12,8 +12,13 @@ counts = dict()
 for line in handle:
     if line.startswith('--------------- '):    # --- xxxx년 xx월 xx일 x요일 ---
         continue
-    words = line.split()    # ['[xxx]', '[오전/오후', 'hh:mm]', ...]
-    for word in words[3:]:
+    
+    words = line.split()
+    
+    if len(words)>2 and words[1] in ['[오전', '[오후']:     # ['[xxx]', '[오전/오후', 'hh:mm]', ...]
+        words = words[3:]
+    
+    for word in words:
         if word == '이모티콘':
             continue
         else:
